@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!-- saved from url=(0127)https://lms.rpi.edu/bbcswebdav/pid-143111-dt-content-rid-5450343_1/courses/1809_ITWS_2110_00/Lab%203%20instructions%281%29.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Lab 3</title>
+  <link rel="stylesheet" href="./Lab3_files/lab3Solution.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script type="text/javascript" src="lab3.js"></script>
+</head>
+
+
+
+<body>
+  <h1>Lab #3 - JavaScript and the Document Object Model</h1>
+  <pre id="info">Lab #3 - JavaScript and the Document Object Model</pre>
+  <div class="quote">
+    <h2>Part 0: Setup</h2>
+    <p>Create a new folder for Lab 3, and confirm that it is being served by Apache. You may choose to serve this lab from a new virtual host, though doing so is not required to receive credit.</p>
+    <p>Ensure that you have a browser plugin capable of debugging JavaScript (you should be familiar with setting breakpoints and watch variables from your previous CS/IT courses). If you are stuck with this, review the help for <a href="https://developers.google.com/chrome-developer-tools/docs/javascript-debugging">developer tools for Chrome</a> as they are an excellent tool to learn with.</p>
+    <p>For this lab, you will be using <a href="https://lms.rpi.edu/bbcswebdav/pid-143111-dt-content-rid-5450343_1/courses/1809_ITWS_2110_00/Lab%203%20instructions.html">an existing HTML document</a>. Save the document as lab3.html in your lab3 folder.</p>
+  </div>
+  <div class="quote">
+    <h2>Part 1: Iterating through the DOM</h2>
+    <p>Create the file lab3.js and use a &lt;script&gt; tag to reference it from your document.</p>
+    <p>Write a JavaScript function that iterates through the DOM of your document. For each <a href="http://www.w3schools.com/htmldom/dom_nodes.asp">Element node</a> starting with the &lt;html&gt; element, recursively print the name of each node in the tree in a text-based format, prefixing each item with a dash for each additional layer of depth. Newlines are escaped via \n.</p>
+    <p>The first few lines should look something like this:</p>
+    <p>html<br>-head<br>--title<br>-body</p>
+    <p>Finally, replace the innerHTML of the element with the id “info” with the return value of this function.</p>
+    <p><strong>To receive credit for Part 1:</strong> Show that your code iterates through the DOM and replaces the contents of #info with the resulting tree.</p>
+  </div>
+  <div class="quote">
+    <h2>Part 2: Event Listeners &amp; Event Bubbling</h2>
+    <p>Modify your function in Part 1 to add an onclick event listener to each element in the body. The function bound to this event listener should display an alert box with the element's tag name.</p>
+    <p>Note that there is a much more performant way of doing this; we will discuss how in another lecture.</p>
+    <p><strong>To receive credit for Part 2:</strong> Show how the onclick event bubbles through the DOM.</p>
+  </div>
+  <div class="quote">
+    <h2>Part 3: CSS Manipulation</h2>
+    <p>First, once the page has finished loading, copy your favorite quote to the end of the body using the cloneNode() and appendChild() methods on the appropriate Element objects.</p>
+    <p>Bind new onmouseover event listeners to each div (including the one you just copied), and in the function change the element's background color and move the element 10px to the right. For the onmouseout event for each element, change the background color back to white and reposition the element to its original location.</p>
+    <p><strong>To receive credit for Part 3:</strong> Demonstrate that your onmouseout and onmouseover listeners fire correctly.</p>
+  </div>
+
+
+</body></html>
