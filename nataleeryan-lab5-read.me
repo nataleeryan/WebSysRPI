@@ -1,0 +1,21 @@
+Natalee Ryan
+Lab 5- Front End optimization
+
+Part 1.
+By binding the event listener to the parent element rather than each individual child, I noticed that the event handler executed slightly quicker.
+
+Part 2.
+Improvement 1: Moving JS to bottom of document to prevent blocking the loading process of HTML and CSS elements.
+
+Improvement 2: CSS at the top (in head) of the page to ensure progressive rendering.
+
+Improvement 3: Minify CSS.
+
+Improvement 4: Minify JS.
+Minifying both JS and CSS takes out all of the spaces and markup that help make the code readable but increases the file size. In some cases, minifying can reduce the file size by as much as 60%.
+
+Improvement 5: No empty src/href properties.
+There weren't any to begin with but I tested to see if it would make a different by adding an empty reference and removing it.
+Removing empty references saves the time taken to try and find / send a search for this empty reference.
+
+I included a readable version (not-minified) of my code in the zip.
