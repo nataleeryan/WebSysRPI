@@ -1,0 +1,82 @@
+ALTER TABLE students
+ADD street varchar(255);
+
+ALTER TABLE students
+ADD city varchar(255);
+
+ALTER TABLE students
+ADD state varchar(25);
+
+ALTER TABLE students
+ADD zip varchar(10);
+
+
+ALTER TABLE courses
+ADD section int(10);
+
+ALTER TABLE courses
+ADD year int(10);
+
+CREATE TABLE grades (
+    id 	INT AUTO_INCREMENT,
+    crn int(11),
+    rin int(9),
+    grade int(3) NOT NULL,
+    PRIMARY KEY (id),
+    FOREIGN KEY (crn) REFERENCES courses(crn),
+    FOREIGN KEY (rin) REFERENCES students(rin)
+    )
+
+
+INSERT INTO `courses`(`crn`, `prefix`, `number`, `title`, `section`, `year`) VALUES (73200,'ITWS',1220,'IT and Society',01,2019)
+
+INSERT INTO `courses`(`crn`, `prefix`, `number`, `title`, `section`, `year`) VALUES (71036,'MATH',1010,'Calculus I',01,2019)
+
+INSERT INTO `courses`(`crn`, `prefix`, `number`, `title`, `section`, `year`) VALUES (73692,'BIOL',1010,'Introduction to Biology',02,2019)
+
+INSERT INTO `courses`(`crn`, `prefix`, `number`, `title`, `section`, `year`) VALUES (73685,'ARTS',4220,'Painting',01,2019)
+
+
+INSERT INTO `students`(`rin`, `rcsID`, `first name`, `last name`, `alias`, `phone`, `street`, `city`, `state`, `zip`) VALUES (661409671,'ryann6','Natalee','Ryan','',3258696208,'1999 Burdett Ave','Troy','NY',12180)
+
+INSERT INTO `students`(`rin`, `rcsID`, `first name`, `last name`, `alias`, `phone`, `street`, `city`, `state`, `zip`) VALUES (661409672,'doej7','John','Doe','',3153230123,'123 Burdett Ave','Troy','NY',12180)
+
+INSERT INTO `students`(`rin`, `rcsID`, `first name`, `last name`, `alias`, `phone`, `street`, `city`, `state`, `zip`) VALUES (661234567,'doej8','Jane','Doe','',5181234567,'345 Sage Ave','Troy','NY',12180)
+
+INSERT INTO `students`(`rin`, `rcsID`, `first name`, `last name`, `alias`, `phone`, `street`, `city`, `state`, `zip`) VALUES (661987654,'vilcit','Tija','Vilcins','',364123456,'2 15th Street','Troy','NY',12180)
+
+INSERT INTO `grades`(`id`, `crn`, `rin`, `grade`) VALUES (1,71036,661409671,'90')
+
+INSERT INTO `grades`(`id`, `crn`, `rin`, `grade`) VALUES (2,73200,661987654,'95')
+
+INSERT INTO `grades`(`id`, `crn`, `rin`, `grade`) VALUES (3,73685,661987654,'92')
+
+INSERT INTO `grades`(`id`, `crn`, `rin`, `grade`) VALUES (4,73692,661409671,'90')
+
+INSERT INTO `grades`(`id`, `crn`, `rin`, `grade`) VALUES (5,73200,661409671,'89')
+
+INSERT INTO `grades`(`id`, `crn`, `rin`, `grade`) VALUES (6,73200,661234567,'93')
+
+INSERT INTO `grades`(`id`, `crn`, `rin`, `grade`) VALUES (7,71036,661234567,'84')
+
+INSERT INTO `grades`(`id`, `crn`, `rin`, `grade`) VALUES (8,71036,661409672,'82')
+
+INSERT INTO `grades`(`id`, `crn`, `rin`, `grade`) VALUES (9,73200,661409672,'95')
+
+INSERT INTO `grades`(`id`, `crn`, `rin`, `grade`) VALUES (10,73685,661409672,'91')
+
+ALTER TABLE `students` CHANGE `first name` `firstname` VARCHAR(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL, CHANGE `last name` `lastname` VARCHAR(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL;
+
+SELECT * FROM students ORDER BY rin, lastname,rcsID,firstname ASC;
+
+SELECT rin
+FROM grades
+WHERE grade > 90
+
+SELECT students.firstname, students.lastname, students.rin, students.street, students.city, students.state, students.zip FROM students, grades WHERE grades.grade > 90 and students.rin=grades.rin
+
+SELECT AVG(grade) FROM (SELECT DISTINCT grade FROM grades) AS T
+
+SELECT crn, AVG(grade) FROM grades GROUP BY crn
+
+SELECT crn, COUNT(rin) FROM grades GROUP BY crn
