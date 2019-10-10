@@ -1,0 +1,56 @@
+[
+   {
+      "title":"Happier",
+      "artist":"Marshmello",
+      "album":"Happier",
+      "coverart":"https://images.genius.com/4ff9277eed36fb6f90372654b6c9d818.1000x1000x1.png",
+      "date":"April 7 2018",
+      "site":"https://marshmellomusic.com/",
+      "genres":"Electronic"
+   },
+   {
+      "title":"Take On Me",
+      "artist":"a-ha",
+      "album":"Hunting High and Low",
+      "coverart":"https://upload.wikimedia.org/wikipedia/en/d/d5/A-ha_take_on_me-1stcoverart.jpg",
+      "date":"September 1984",
+      "site":"https://a-ha.com/",
+      "genres":"Pop/Rock"
+   },
+   {
+      "title":"Mr. Brightside",
+      "artist":"The Killers",
+      "album":"Hot Fuss",
+      "coverart":"https://upload.wikimedia.org/wikipedia/en/1/17/The_Killers_-_Hot_Fuss.png",
+      "date":"June 7 2004",
+      "site":"https://www.thekillersmusic.com/",
+      "genres":"Alternative rock"
+   },
+   {
+      "title":"See You Again",
+      "artist":"Tyler, the Creator",
+      "album": "Flower Boy",
+      "coverart":"https://cdn.shopify.com/s/files/1/0993/9646/products/SNY544113CD_1024x1024.jpg?v=1500069319",
+      "date":"July 21 2017",
+      "site":"none",
+      "genres":"Rap"
+   },
+   {
+      "title":"(You're The) Devil in Disguise",
+      "album": "Devil in Disguise",
+      "artist":"Elvis Presley",
+      "coverart":"https://upload.wikimedia.org/wikipedia/en/thumb/9/94/Elvis_Devil_in_Disguise.jpg/220px-Elvis_Devil_in_Disguise.jpg",
+      "date":"1996",
+      "site":"https://www.elvis.com/",
+      "genres":"Rhythm and blues"
+   },
+   {
+      "title":"Get Lucky",
+      "artist":"Daft Punk",
+      "album": "Get Lucky",
+      "coverart":"https://upload.wikimedia.org/wikipedia/en/7/71/Get_Lucky.jpg",
+      "date":"April 19 2013",
+      "site":"https://www.daftpunk.com/",
+      "genres":"Disco / Funk"
+   }
+]
